@@ -58,7 +58,6 @@ body {
     height: auto;
     border: 2px solid #000;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(2, auto);
     gap: 20px;
     padding: 1rem;
 }
@@ -162,27 +161,23 @@ body {
 @media screen and (max-width: 1200px) {
     .cards-container {
         grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(3, auto);
     }
 }
 
 @media screen and (max-width: 900px) {
     .cards-container {
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(4, auto);
     }
 }
 
 @media screen and (max-width: 600px) {
     .cards-container {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(6, auto);
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
 @media screen and (max-width: 450px) {
     .cards-container {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(12, auto);
+        grid-template-columns: repeat(2, 1fr);
     }
 }
