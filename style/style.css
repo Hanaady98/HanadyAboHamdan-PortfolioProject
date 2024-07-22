@@ -798,7 +798,7 @@ input[type="submit"] {
 
 }
 
-/*---------------617px breakpoint--------------------*/
+/*---------------450px breakpoint--------------------*/
 @media (max-width: 450px) {
     html {
         font-size: 50%;
@@ -827,9 +827,13 @@ input[type="submit"] {
     .contact form .input-box input {
         width: 100%;
     }
+
+    .work-layer h4 {
+        font-size: 1.8rem;
+    }
 }
 
-/*--------------------356px-BREAKPONIT---------------------*/
+/*--------------------365px-BREAKPONIT---------------------*/
 @media (max-width:365px) {
     .about-img img {
         width: 90vw;
@@ -842,5 +846,9 @@ input[type="submit"] {
     .footer p {
         text-align: center;
         margin-top: 2rem;
+    }
+
+    .work-layer h4 {
+        font-size: 1.8rem;
     }
 }
