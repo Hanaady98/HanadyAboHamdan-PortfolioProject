@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Builder 3</title>
+</head>
+
+<body>
+    <input type="color" id="ucolor">
+    <input type="number" id="sizew" placeholder="width">
+    <input type="number" id="sizeh" placeholder="height">
+    <button id="btn">Add</button>
+    <div class="container"></div>
+
+    <script>
+        document.querySelector('#btn').addEventListener('click', () => {
+            const box = document.createElement('div');
+            let ucolor = document.querySelector('#ucolor').value;
+            const sizew = document.querySelector('#sizew').value;
+            const sizeh = document.querySelector('#sizeh').value;
+            box.style.width = sizew + 'px';
+            box.style.height = sizeh + 'px';
+            box.style.border = '1px solid #000';
+            box.style.backgroundColor = ucolor;
+
+            document.querySelector('.container').appendChild(box);
+        });
+    </script>
+</body>
+
+</html>

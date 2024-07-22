@@ -1,0 +1,73 @@
+//mixin media
+
+@mixin respond-to($breakpoint) {
+    @if $breakpoint =='small' {
+        @media screen and (max-width: 800px) {
+            @content;
+        }
+    }
+}
+
+#container {
+    @include respond-to(small) {
+        flex-direction: column;
+    }
+}
+
+#container-img,
+#container-form {
+    @include respond-to(small) {
+        width: 100vw;
+    }
+}
+
+img {
+    @include respond-to(small) {
+        height: 100%;
+    }
+}
+
+#form-title>h1 {
+    @include respond-to(small) {
+        font: normal normal 900 28px/41px Heebo;
+    }
+}
+
+#form-title>p {
+    @include respond-to(small) {
+        font: normal normal normal 15px/22px Heebo;
+    }
+}
+
+input[type="submit"] {
+    @include respond-to(small) {
+        font: normal normal bold 14px/19px Heebo;
+        letter-spacing: 0.21px;
+        width: 100%;
+        margin-bottom: 1em 0;
+    }
+}
+
+label {
+    @include respond-to(small) {
+        font: normal normal bold 10px/14px Heebo;
+    }
+}
+
+input {
+    @include respond-to(small) {
+        height: 34px;
+    }
+}
+
+#container-form {
+    @include respond-to(small) {
+        margin-top: 5em;
+    }
+}
+
+#form-title {
+    @include respond-to(small) {
+        width: 85vw;
+    }
+}

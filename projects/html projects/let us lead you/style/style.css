@@ -1,0 +1,131 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*creation of CSS Variables*/
+:root {
+    --yellow: #D3E10E;
+    --white: #F9F9F9;
+    --blue: #011560;
+    --h1-font: normal normal bold 4rem Assistant;
+    --p-font: normal normal normal 1rem Assistant;
+    --label-font: normal normal bold 12px/21px Assistant;
+}
+
+.img-container {
+    width: 100vw;
+    margin-top: -85px;
+}
+
+img {
+    width: 100%;
+    height: 85vh;
+    object-fit: cover;
+    position: relative;
+}
+
+.title {
+    position: absolute;
+    bottom: 30rem;
+    text-align: center;
+    left: 29rem;
+}
+
+.title>h1 {
+    font: var(--h1-font);
+    color: var(--yellow);
+    opacity: 1;
+}
+
+.title>p {
+    text-align: center;
+    font: var(--p-font);
+    color: var(--white);
+    opacity: 1;
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    direction: rtl;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    gap: 2rem;
+}
+
+.form-control {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font: var(--label-font);
+    color: var(--blue);
+    opacity: 1;
+}
+
+input[type="text"],
+input[type="email"] {
+    background: var(--white) 0% 0% no-repeat padding-box;
+    opacity: 1;
+    border: 0;
+    border-bottom: 3px solid var(--yellow);
+    width: 18rem;
+    height: 35px;
+}
+
+input[type="submit"] {
+    text-align: center;
+    font: normal normal bold 1rem Assistant;
+    letter-spacing: 0.33px;
+    color: #011560;
+    opacity: 1;
+    border: 0;
+    background: var(--yellow) 0% 0% no-repeat padding-box;
+    width: 8rem;
+    height: 35px;
+    margin-top: 1.2rem;
+}
+
+.mobile-container {
+    display: none;
+}
+
+/*media queries*/
+@media (max-width: 800px) {
+
+    .img-container,
+    .title {
+        display: none;
+    }
+
+    .mobile-container {
+        display: block;
+    }
+
+    .mobile-container img {
+        width: 100%;
+        height: 20%;
+    }
+
+    form {
+        flex-direction: column;
+        height: 30vh;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="submit"] {
+        width: 20rem;
+    }
+
+    input[type="submit"] {
+        margin-top: 1.2rem;
+    }
+}

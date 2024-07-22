@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <textarea id="txt-area"></textarea>
+    <input type="color" id="txt-color">
+    <input type="number" id="txt-size" placeholder="text size">
+    <!-- border style-->
+    <input type="number" id="border-size" placeholder="border size">
+    <select id="border-style">
+        <option value="dotted">dotted</option>
+        <option value="dashed">dashed</option>
+        <option value="solid">solid</option>
+        <option value="double">double</option>
+        <option value="groove">groove</option>
+        <option value="ridge">ridge</option>
+        <option value="inset">inset</option>
+        <option value="outset">outset</option>
+        <option value="none">none</option>
+        <option value="hidden">hidden</option>
+    </select>
+
+
+    <input type="color" id="border-color">
+    <input type="number" id="border-radius" placeholder="border radius">
+    <!--------------------------------->
+
+    <input type="text" id="box-margin" placeholder="margin">
+    <input type="text" id="box-padding" placeholder="padding">
+
+    <!--------------------------------->
+
+    <select id="element-type">
+        <option value="h1">h1</option>
+        <option value="h2">h2</option>
+        <option value="h3">h3</option>
+        <option value="p">p</option>
+        <option value="div">div</option>
+        <option value="span">span</option>
+    </select>
+
+    <!--------------------------------->
+    <input type="number" id="w-size" placeholder="width">
+    <input type="number" id="h-size" placeholder="height">
+    <input type="color" id="u-color">
+    <button id="btn">Add</button>
+    <div class="container"></div>
+
+    <script>
+
+        const addButton = document.querySelector('#btn');
+        const textBox = document.getElementById('txt-area');
+        const textColor = document.getElementById('txt-color');
+        const textSize = document.querySelector('#txt-size');
+        /*-------------------border variables-----------------*/
+        const boxBorderSize = document.getElementById('border-size');
+        const boxBorderStyle = document.getElementById('border-style');
+        const boxBorderColor = document.getElementById('border-color');
+        const boxBorderRadius = document.getElementById('border-radius');
+        /*------------------------------------*/
+        const boxMargin = document.querySelector('#box-margin');
+        const boxPadding = document.querySelector('#box-padding');
+        /*------------------------------------*/
+        const boxElements = document.querySelector('#element-type');
+        /*------------------------------------*/
+        const boxWidth = document.querySelector('#w-size');
+        const boxHeight = document.querySelector('#h-size');
+        const boxColor = document.getElementById('u-color');
+
+        const boxContainer = document.querySelector('.container');
+
+        addButton.addEventListener('click', () => {
+            const box = document.createElement(boxElements.value);
+            box.textContent = textBox.value;
+            box.style.color = textColor.value;
+            box.style.fontSize = textSize.value + 'px';
+            box.style.width = boxWidth.value + 'px';
+            box.style.height = boxHeight.value + 'px';
+            box.style.borderStyle = boxBorderStyle.value;
+            box.style.borderColor = boxBorderColor.value;
+            box.style.borderRadius = boxBorderRadius.value + 'px';
+            box.style.borderWidth = boxBorderSize.value + 'px';
+
+            box.style.margin = boxMargin.value + 'px';
+            box.style.padding = boxPadding.value + 'px';
+            // box.tagName = boxElement.value;
+
+
+            box.style.backgroundColor = boxColor.value;
+
+            boxContainer.appendChild(box);
+        });
+
+    </script>
+</body>
+
+</html>

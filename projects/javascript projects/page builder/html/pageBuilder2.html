@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Builder 2</title>
+</head>
+
+<body>
+    <input type="color" id="ucolor">
+    <button id="btn">Add</button>
+    <div class="container"></div>
+
+    <script>
+        document.querySelector('#btn').addEventListener('click', () => {
+            const box = document.createElement('div');
+            let ucolor = document.querySelector('#ucolor').value;
+            box.style.width = '200px';
+            box.style.height = '200px';
+            box.style.border = '1px solid #000';
+            box.style.backgroundColor = ucolor;
+
+            document.querySelector('.container').appendChild(box);
+        });
+    </script>
+</body>
+
+</html>

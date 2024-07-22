@@ -1,0 +1,39 @@
+#form {
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+#container-form {
+    direction: rtl;
+    margin-top: 10em;
+    width: 40vw;
+}
+
+#form-title {
+    width: 60%;
+    margin: auto;
+
+    h1 {
+        font: $formTitleH1Font;
+        color: $formTextColor;
+    }
+
+    p {
+        font: $FormTitlePfont;
+        color: $formTextColor;
+    }
+}
+
+.form-control {
+    display: flex;
+    flex-direction: column;
+
+    input {
+        height: 50px;
+        background: $inputBgc;
+        border: 0;
+        border-bottom: $borderBottom;
+    }
+}

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hanady's Portfolio</title>
+    <!--css link relation-->
+    <link rel="stylesheet" href="./style/style.css">
+    <!------------- box icons ----------->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <!--------- header design----------->
+
+    <header class="header">
+        <a href="#" class="logo"> HanadyScript</a>
+
+        <!------------ navbar ------------->
+
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#service">Service</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <!--dark mode icon-->
+        <div class="bx bx-moon" id="darkMode-icon"></div>
+
+        <div class="bx bx-menu" id="menu-icon"></div>
+    </header>
+
+    <!-------------- home section ---------------->
+    <section class="home" id="home">
+        <div class="home-content">
+            <!--short introduction-->
+            <h3>Hello, I am</h3>
+            <h1>Hanady Abo Hamdan </h1>
+            <p> your guide to a web wonderland where the ordinary becomes extraordinary. Join me on a journey where
+                pixels dance and
+                dreams take flight, Let's create mind-blowing digital experiences and revolutionize the web together!
+            </p>
+            <!--social media icons-->
+            <div class="social-media">
+                <a href="https://instagram.com/nanosh1d"><i class='bx bxl-instagram'></i></a>
+                <a href="tel:+972538305331"><i class='bx bxs-phone'></i></a>
+                <a href="https://www.linkedin.com/in/hanady-abo-hamdan-5565932a5"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://wa.me/+972538305331"><i class='bx bxl-whatsapp'></i></a>
+                <a href="mailto:nanosh@hotmail.com"><i class='bx bx-at'></i></a>
+                <a href="https://www.google.com/maps/place/Tira+Hamerkaz"><i class='bx bx-map'></i></a>
+            </div>
+        </div>
+
+        <!-------right side - home section------->
+        <div class="profession-container">
+            <div class="profession-box">
+                <!-----------one----------->
+                <div class="profession" style="--i:0;">
+                    <i class='bx bx-code-alt'></i>
+                    <h3>FullStack web Developer</h3>
+                </div>
+                <!------------two----------->
+                <div class="profession" style="--i:1;">
+                    <i class='bx bx-code-curly'></i>
+                    <h3>Front-End Developer</h3>
+                </div>
+                <!----------three------------>
+                <div class="profession" style="--i:2;">
+                    <i class='bx bx-code'></i>
+                    <h3>Back-End Developer</h3>
+                </div>
+                <!------------four---------->
+                <div class="profession" style="--i:3;">
+                    <i class='bx bxs-book-heart'></i>
+                    <h3>Writer</h3>
+                </div>
+                <!---------- circle ------------>
+                <div class="circle"></div>
+            </div>
+            <!---->
+            <div class="overlay"></div>
+        </div>
+        <!--img-->
+        <div class="home-img">
+            <img src="./images/mainPic.png" alt="me">
+        </div>
+    </section>
+
+    <!--------------about section------------>
+    <section id="about" class="about">
+        <div class="about-img">
+            <img src="./images/me.jpg" alt="me">
+        </div>
+
+        <!------about content------>
+        <div class="about-content">
+            <h2 class="heading">About <span>Me</span></h2>
+            <h3>Hello i'm a passionate fullstack web developer! </h3>
+            <p> artisan sculpting digital beauty with lines of code. let's craft
+                digital wonders that leave the world spellbound. <br> From translating design concepts into elegant code
+                to
+                staying at the
+                forefront of emerging technologies,<br> I'm dedicated to pushing the boundaries of what's possible in
+                web
+                development. <br> Let's
+                create something extraordinary together.</p>
+
+            <button onclick="alert('Coming Soon!')">Click To Download CV</button>
+        </div>
+
+    </section>
+    <!------------------all my work service section------------------>
+    <section class="service" id="service">
+        <!------------------html & css projects------------------>
+        <h2 class="heading"> My <span>Work</span></h2>
+        <div class="service-container">
+            <!----------------------project 1---------------->
+            <div class="work-box">
+                <img src="./projects/html projects/let us lead you forward/images/project1.PNG" alt="landing page">
+
+                <div class="work-layer">
+                    <h4>let us lead you forward</h4>
+                    <p>find us near you and we will lead you</p>
+                    <a href="./projects/html projects/let us lead you forward/transitionPage.html"><i
+                            class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+            <!-------------------project 2------------------->
+            <div class="work-box">
+                <img src="./projects/html projects/here and now/images/project2.PNG" alt="landing page">
+
+                <div class="work-layer" id="layerOne">
+                    <h4>Here & Now</h4>
+                    <p>Your landing experience begins now</p>
+                    <a href="./projects/html projects/here and now/transitionPage.html"><i
+                            class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+            <!-------------------project 3------------------->
+            <div class="work-box">
+                <img src="./projects/html projects/good coffee for a good morning/images/project3.PNG"
+                    alt="landing page">
+
+                <div class="work-layer" id="layer">
+                    <h4>good coffee for a good morning</h4>
+                    <p>start your day with the best coffee</p>
+                    <a href="./projects/html projects/good coffee for a good morning/transitionPage.html"><i
+                            class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+            <!-------------------project 4------------------->
+            <div class="work-box">
+                <img src="./projects/html projects/let us lead you/images/project4.PNG" alt="landing page">
+
+                <div class="work-layer">
+                    <h4>let us lead you</h4>
+                    <p>let us lead you to success</p>
+                    <a href="./projects/html projects/let us lead you/transitionPage.html"><i
+                            class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+            <!-------------------project 5------------------->
+            <div class="work-box">
+                <img src="./projects/html projects/discover the world/images/cropped.PNG" alt="landing page">
+
+                <div class="work-layer">
+                    <h4>Discover The World</h4>
+                    <p>Adventure awaits you</p>
+                    <a href="./projects/html projects/discover the world/transitionPage.html"><i
+                            class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+            <!-------------------project 6------------------->
+            <div class="work-box">
+                <img src="./projects/html projects/free consulation/images/project6.PNG" alt="landing page">
+
+                <div class="work-layer" id="layerTwo">
+                    <h4>Free Consulation</h4>
+                    <p>sounds like a plan?</p>
+                    <a href="./projects/html projects/free consulation/transitionPage.html"><i
+                            class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+            <!-------------------project 7------------------->
+            <div class="work-box">
+                <img src="./projects/html projects/think out of the box/images/cropped.PNG" alt="landing page"
+                    class="landingPage">
+
+                <div class="work-layer" id="layerThree">
+                    <h4>Think Out Of The Box</h4>
+                    <p>Be Creative</p>
+                    <a href="./projects/html projects/think out of the box/transitionPage.html"><i
+                            class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+            <!-------------------project 8------------------->
+            <div class="work-box">
+                <img src="./projects/html projects/bonus project/images/bonus1.PNG" alt="landing page"
+                    class="landingPage">
+
+                <div class="work-layer" id="layerFour">
+                    <h4>Sign Up</h4>
+                    <p>Colors Everywhere</p>
+                    <a href="./projects/html projects/bonus project/transitionPage.html"><i
+                            class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+        </div> <!--closing tag of the service container div-->
+
+
+        <!------------------JAVASCRIPT projects----------------------->
+        <h2 class="heading"> <span> Javascript </span> Projects </h2>
+        <div class="service-container">
+            <!-------------------project 1------------------->
+            <div class="work-box">
+                <img src="./projects/javascript projects/page builder/images/pageBuilderPic.PNG"
+                    alt="a page builder image" class="landingPage">
+
+                <div class="work-layer" id="pageBuilderLayer">
+                    <h4> Build A Page </h4>
+                    <p> Be Creative </p>
+                    <a href="./projects/javascript projects/page builder/transitionPage.html"><i
+                            class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+
+            <!-------------------project 2------------------->
+            <div class="work-box">
+                <img src="./projects/javascript projects/guess the word/images/guessTheWordPic.PNG"
+                    alt="guess the word image">
+
+                <div class="work-layer" id="guessTheWordLayer">
+                    <h4> Guess The Word </h4>
+                    <p> Get ready for fun challenges ahead. </p>
+                    <a href="./projects/javascript projects/guess the word/transitionPage.html"><i
+                            class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+            <!-------------------project 3------------------->
+            <div class="work-box">
+                <img src="./projects/javascript projects/Memeory Game/IMAGES/teamRocketPic.PNG" alt="team rocket image">
+
+                <div class="work-layer" id="memoryGameLayer">
+                    <h4> Memory Game </h4>
+                    <p> Get ready for fun challenges ahead. </p>
+                    <a href="./projects/javascript projects/Memeory Game/transitionPage.html"><i
+                            class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+            <!-------------------project 4------------------->
+            <div class="work-box">
+                <img src="./projects/javascript projects/Math Game/images/mathGamePic.PNG" alt=" math game image">
+
+                <div class="work-layer" id="mathGameLayer">
+                    <h4> Math Game </h4>
+                    <p> Check your math skills </p>
+                    <a href="./projects/javascript projects/Math Game/transitionPage.html"><i
+                            class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+
+            <!-------------------project 5------------------->
+            <div class="work-box">
+                <img src="./projects/javascript projects/piano project/images/pianoPic.PNG" alt="playable piano">
+
+                <div class="work-layer" id="pianoLayer">
+                    <h4> Piano </h4>
+                    <p> playable piano </p>
+                    <a href="./projects/javascript projects/piano project/transitionPage.html"><i
+                            class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+            <!-------------------project 6------------------->
+            <div class="work-box">
+                <img src="./projects/javascript projects/countries/images/countriesImage.PNG"
+                    alt="countries search image">
+
+                <div class="work-layer" id="countriesLayer">
+                    <h4> Countries </h4>
+                    <p> Seach for any country </p>
+                    <a href="./projects/javascript projects/countries/transitionPage.html"><i
+                            class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+            <!-------------------project 7------------------->
+            <div class="work-box">
+                <img src="./projects/javascript projects/expenses/images/reportRecords.PNG"
+                    alt="report records expenses image">
+
+                <div class="work-layer" id="expensesLayer">
+                    <h4> Expenses report </h4>
+                    <p> calculate your incomes and expenses </p>
+                    <a href="./projects/javascript projects/expenses/transitionPage.html"><i
+                            class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+            <!-------------------project 8------------------->
+            <div class="work-box">
+                <img src="./projects/javascript projects/Tic Tac Toe Game/images/ticTacToeGame.PNG"
+                    alt="tic tac toe game">
+
+                <div class="work-layer" id="ticTacToeLayer">
+                    <h4> Tic Tac Toe </h4>
+                    <p> fun game </p>
+                    <a href="./projects/javascript projects/Tic Tac Toe Game/transitionPage.html"><i
+                            class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+            <!---------------------------------------->
+
+        </div> <!--closing tag of the service container-->
+
+    </section> <!--the closing tag of the service section -->
+    <!-------------------contact section----------------->
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Me</span></h2>
+        <form>
+            <div class="input-box">
+                <input type="text" placeholder="First Name" required>
+                <input type="text" placeholder="Last Name" required>
+            </div>
+            <!---->
+            <div class="input-box">
+                <input type="phone" placeholder="Phone Number" required>
+                <input type="email" placeholder="Email Address" required>
+            </div>
+            <!---->
+            <textarea placeholder="Write Your Message Here" required></textarea>
+            <input type="submit" value="Send" class="btn">
+        </form>
+    </section>
+
+    <!--------------------footer------------------------>
+    <footer class="footer">
+        <div class="footer-text">
+            <p> Inspired by codehal &copy; - Hanady </p>
+        </div>
+        <div class="footer-iconTop">
+            <a href="#top"><i class='bx bx-up-arrow-alt'></i></a>
+        </div>
+    </footer>
+    <!-------------------scroll reveal--------------------->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-----------------custom js-------------------->
+    <script src="./script/portfolio.js"></script>
+</body>
+
+</html>

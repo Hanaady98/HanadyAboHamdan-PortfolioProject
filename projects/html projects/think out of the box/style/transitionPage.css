@@ -1,0 +1,327 @@
+/*---------------fonts---------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+/*--------------------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: var(--bgc-grey);
+}
+
+/*------------CSS Variables-------------*/
+
+:root {
+    --pink: rgb(207, 169, 175);
+    --main-font: Roboto;
+    --colorful: rgb(21, 83, 55);
+    --bgc-grey: rgba(51, 51, 51, 0.542);
+    --heebo-font: Heebo;
+    --firstColor: #643843;
+    --secondColor: #99627A;
+}
+
+/*-----------header-----------------*/
+
+#hamburger {
+    color: black;
+    display: none;
+    margin-top: 5px;
+    font-size: 24px;
+    z-index: 10;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+/*--------------------nav----------------------*/
+
+.top-nav {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--firstColor);
+    color: #FFF;
+    height: 50px;
+    padding: 1em;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 1.5rem;
+    color: var(--pink);
+    font-weight: 250;
+    cursor: pointer;
+    font-family: var(--heebo-font);
+    z-index: 10;
+}
+
+li a {
+    font-size: 1.3rem;
+    color: white;
+    font-weight: 150;
+    cursor: pointer;
+    font-family: var(--heebo-font);
+    z-index: 10;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu>li {
+    margin: 0 1rem;
+    overflow: hidden;
+}
+
+.menu-button-container {
+    display: none;
+    height: 100%;
+    width: 30px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+    display: block;
+    background-color: #fff;
+    position: absolute;
+    height: 4px;
+    width: 30px;
+    transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 2px;
+}
+
+.menu-button::before {
+    content: '';
+    margin-top: -8px;
+}
+
+.menu-button::after {
+    content: '';
+    margin-top: 8px;
+}
+
+#menu-toggle:checked+.menu-button-container .menu-button::before {
+    margin-top: 0px;
+    transform: rotate(405deg);
+}
+
+#menu-toggle:checked+.menu-button-container .menu-button {
+    background: rgba(255, 255, 255, 0);
+}
+
+#menu-toggle:checked+.menu-button-container .menu-button::after {
+    margin-top: 0px;
+    transform: rotate(-405deg);
+}
+
+/*-------------------home section------------------------*/
+
+.intro {
+    background-color: var(--bgc-grey);
+    display: flex;
+    flex-direction: column;
+    height: 45vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    padding: 20px;
+}
+
+.content h1,
+p {
+    text-align: center;
+    color: white;
+    font-family: var(--main-font);
+    padding: 10px;
+}
+
+.content>h1 {
+    text-align: center;
+    font-size: 2rem;
+    text-shadow: -4px -3px 6px rgb(227, 131, 147);
+}
+
+.content>p {
+    text-align: center;
+    font-size: 1.5rem;
+    padding-inline: 8rem;
+}
+
+
+.btn {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.go-live,
+.download-btn {
+    width: 12rem;
+    padding: 10px 5px;
+    cursor: pointer;
+    background-color: beige;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+a.go-live,
+a.download-btn {
+    text-decoration: none;
+    color: #000;
+    text-align: center;
+    font-size: 1rem;
+}
+
+/*-----------animated languages logos------------*/
+
+.languages {
+    overflow: hidden;
+}
+
+.wrapper {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 9rem;
+    justify-items: stretch;
+}
+
+@keyframes scroll {
+    to {
+        translate: calc(-3 * 9rem);
+    }
+}
+
+.wrapper {
+    animation: scroll 10s linear infinite;
+}
+
+/*--------------landing page img-------------------*/
+.landing-page img {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+}
+
+footer {
+    text-align: center;
+    padding-top: 0.5rem;
+    width: 100vw;
+    height: 5vh;
+    font-size: 1.3rem;
+    color: white;
+    background-color: var(--firstColor);
+}
+
+/*-----media queries------*/
+@media (max-width:800px) {
+
+    .menu-button-container {
+        display: flex;
+    }
+
+    .menu {
+        position: absolute;
+        top: 0;
+        margin-top: 50px;
+        left: 0;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #menu-toggle~.menu li {
+        height: 0;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    #menu-toggle:checked~.menu li {
+        border: 1px solid #333;
+        height: 2.5em;
+        padding: 0.5em;
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .menu>li {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0.5em 0;
+        width: 100%;
+        color: white;
+        background-color: #222;
+    }
+
+    .menu>li:not(:last-child) {
+        border-bottom: 1px solid #444;
+    }
+
+
+    /*home page*/
+    .intro {
+        height: 55vh;
+    }
+
+    .content>h1 {
+        padding: 1rem;
+    }
+
+    .content p {
+        padding-inline: 0;
+    }
+
+    a.go-live,
+    a.download-btn {
+        width: 100px;
+        padding: 5px;
+    }
+
+    .wrapper {
+        grid-auto-columns: 7rem;
+    }
+
+    /*--------image-----------*/
+    .landing-page>img {
+        width: 100%;
+        height: 70vh;
+    }
+
+    footer {
+        padding-top: 1.5rem;
+        height: 7vh;
+        font-size: 1.1rem;
+    }
+
+}

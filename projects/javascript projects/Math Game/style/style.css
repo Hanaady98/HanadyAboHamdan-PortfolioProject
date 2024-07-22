@@ -1,0 +1,270 @@
+/*----------root setup----------*/
+
+:root {
+    --options: normal normal 500 1rem Arial;
+    --label: normal normal bold 1.8rem Arial;
+}
+
+/*------------reset------------*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*----------html styling ---------*/
+/*-------------body-----------*/
+body {
+    background: url(../images/pink.math.jpg) no-repeat;
+    background-size: 100% 100%;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    place-items: center;
+}
+
+/*---------wrapper--------*/
+.wrapper {
+    width: 50%;
+    height: fit-content;
+    min-height: 90%;
+    background-color: lightgrey;
+    margin: 2rem;
+}
+
+/*-------------header-------------*/
+header {
+    background-color: #d564a1;
+    border-bottom: 1px solid #000;
+}
+
+header>h1 {
+    text-align: center;
+    padding: 1rem;
+}
+
+/*-------------Options-------------*/
+
+.options {
+    text-align: center;
+    border-bottom: 1px solid #000;
+}
+
+/*------------------------------------*/
+
+.options h2 {
+    margin-top: 1rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/*------------select--------------*/
+select {
+    margin: 0.5rem;
+    padding: 0.5rem 2rem;
+    font: var(--options);
+    cursor: pointer;
+}
+
+/*-------------option---------------*/
+option {
+    font: var(--options);
+    border-bottom: 10px solid #000;
+}
+
+/*--------------input field------------------*/
+
+.input-field {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    justify-content: center;
+}
+
+/*--------------input field------------------*/
+
+.input-box {
+    width: 32%;
+    display: flex;
+    flex-direction: column;
+}
+
+/*--------------Calc Section------------------*/
+
+.calc-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*--------------Calc game---------------*/
+
+.calc-game {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    margin: 3rem 0;
+    align-items: center;
+    justify-content: center;
+}
+
+/*--------------labelinput box--------------------*/
+
+.input-box label {
+    margin-top: 1.2rem;
+    font-size: 12pt;
+}
+
+/*--------------label--------------------*/
+
+label {
+    font: var(--label);
+}
+
+/*--------------input--------------------*/
+
+.calc-game input {
+    height: 2rem;
+}
+
+/*--------------button--------------------*/
+
+.calc-game input[type="submit"] {
+    font-size: 6rem;
+    width: 20%;
+    cursor: pointer;
+    font: var(--options);
+}
+
+/*--------------number--------------------*/
+
+.calc-game input[type="number"] {
+    font-size: 1.5rem;
+    width: 30%;
+}
+
+/*------------------table---------------------*/
+
+#results {
+    width: 80%;
+    margin: auto;
+}
+
+/*--------------------tr-------------------*/
+
+#results tr {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    border-left: 1px solid #000;
+}
+
+/*--------------------th-------------------*/
+#results th {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    background-color: #e872b1;
+    border-right: 1px solid #000;
+    border-bottom: 1px solid #000;
+}
+
+/*--------------------td-------------------*/
+#results td {
+    font-size: 18pt;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    border-right: 1px solid #000;
+    border-bottom: 1px solid #000;
+}
+
+/*----------------responsive-----------------*/
+
+/*------------media queries-------*/
+@media screen and (max-width:850px) {
+    body {
+        margin: 0;
+        background: url('../images/pink.math.jpg') no-repeat center center fixed;
+        background-size: cover;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .wrapper {
+        width: 70%;
+        margin: auto;
+    }
+
+    .options {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .options h2 {
+        display: block;
+        width: 100%;
+    }
+
+    .calc-game {
+        width: 80%;
+    }
+
+    .exercise {
+        width: 100%;
+        text-align: end;
+    }
+
+    .calc-game input[type="submit"] {
+        width: 70%;
+    }
+
+    .calc-game input[type="number"] {
+        width: 100%;
+    }
+
+    .input-box {
+        width: 48%;
+    }
+
+    /*-------------------------------------*/
+
+}
+
+@media screen and (max-width: 450px) {
+    .wrapper {
+        width: 90vw;
+    }
+
+    .input-field {
+        display: flex;
+        width: 100%;
+        flex-direction: column
+    }
+
+    .input-field label {
+        font-size: 1.2rem;
+        margin-top: 1rem;
+    }
+
+    .input-box {
+        width: 100%;
+    }
+
+    select {
+        margin: 1rem auto;
+        width: 70%;
+        padding: 0.5rem 1rem;
+    }
+
+    #results {
+        margin-bottom: 1rem;
+    }
+
+    #results td {
+        font-size: 15pt;
+    }
+
+}

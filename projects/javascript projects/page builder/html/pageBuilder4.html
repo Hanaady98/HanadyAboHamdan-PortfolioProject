@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <textarea id="tArea"></textarea>
+    <input type="number" id="sizew" placeholder="width">
+    <input type="number" id="sizeh" placeholder="height">
+    <input type="color" id="ucolor">
+    <button id="btn">Add</button>
+    <div class="container"></div>
+
+    <script>
+
+        document.querySelector('#btn').addEventListener('click', () => {
+            const box = document.createElement('div');
+            let tArea = document.querySelector('#tArea').value;
+            const sizeW = document.querySelector('#sizew').value;
+            const sizeH = document.querySelector('#sizeh').value;
+            let uColor = document.querySelector('#ucolor').value;
+
+            box.innerHTML = tArea;
+            box.style.width = sizeW + 'px';
+            box.style.height = sizeH + 'px';
+            box.style.border = '1px solid #000'
+            box.style.backgroundColor = uColor;
+
+            document.querySelector('.container').appendChild(box);
+        });
+
+    </script>
+</body>
+
+</html>

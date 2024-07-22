@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Math Game </title>
+    <link rel="stylesheet" href="./style/style.css">
+    <script src="./script/script.js" async defer></script>
+</head>
+
+<body>
+    <!-- We need to create two variables num1 & num2, comparble to the selected option the user chooses, these two numbers should be randomized -->
+    <!---------------------->
+
+
+    <!--main container-->
+    <div class="wrapper">
+        <!-- GAME TITLE section -->
+        <header>
+            <h1> Math game </h1>
+        </header>
+
+        <!-------------------Game Options---------------------->
+        <section class="options">
+            <h2>Game Options</h2>
+            <!---------------------------->
+            <div class="input-field">
+                <div class="input-box">
+                    <label> Choose Number </label>
+                    <!--numbers range-->
+                    <select id="num-range">
+                        <option value="10">1-10</option>
+                        <option value="100">1-100</option>
+                        <option value="1000">1-1000</option>
+                    </select>
+                </div>
+                <!----------Operators Options----------->
+
+                <!--numbers range-->
+                <div class="input-box">
+                    <label> Choose Operator </label>
+                    <select id="operators-range">
+                        <option value="+"> Plus + </option>
+                        <option value="-"> Minus - </option>
+                        <option value="*">Multiply * </option>
+                        <option value="/">Divide / </option>
+                    </select>
+                </div>
+            </div> <!--closing tag of the select box-->
+        </section>
+        <!---------------CALCULATION CONTAINER------------------>
+        <section class="calc-container">
+
+            <!--creating a div to accumulate the elements to opperate the game-->
+            <div class="calc-game">
+                <!--exercise // created that div to get easier access later on to print the exercise on the table -->
+                <div class="exercise">
+                    <label id="num1"> 5 </label>
+                    <label id="operator"> + </label>
+                    <label id="num2"> 3 </label>
+                </div>
+                <!---->
+                <label id="equals"> = </label>
+                <input type="number" id="answer">
+                <input type="submit" value="Check" id="sub-btn">
+            </div> <!--closing tag of the cal-container-->
+
+            <!---------------------------->
+            <!---------Game Results / using a table element -------------->
+            <table id="results">
+                <thead>
+                    <tr>
+                        <th> Exercise </th>
+                        <th> Correct Answer </th>
+                        <th> User's Answer </th>
+                        <th> Points </th>
+                    </tr>
+                </thead>
+                <!-----to append from js----->
+                <tbody></tbody>
+            </table>
+
+
+
+        </section>
+
+    </div> <!--closing tag of the wrapper-->
+</body>
+
+</html>

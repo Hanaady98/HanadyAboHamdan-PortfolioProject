@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Guess the word </title>
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="./script/script.js" async defer></script>
+</head>
+
+<body>
+    <div class="game-container">
+        <div class="categories"></div>
+        <div class="correct-letters">
+            <!--append child-->
+        </div>
+        <div class="alphabet">
+            <div class="letters key content">A</div>
+            <div class="letters key content">B</div>
+            <div class="letters key content">C</div>
+            <div class="letters key content">D</div>
+            <div class="letters key content">E</div>
+            <div class="letters key content">F</div>
+            <div class="letters key content">G</div>
+            <div class="letters key content">H</div>
+            <div class="letters key content">I</div>
+            <div class="letters key content">J</div>
+            <div class="letters key content">K</div>
+            <div class="letters key content">L</div>
+            <div class="letters key content">M</div>
+            <div class="letters key content">N</div>
+            <div class="letters key content">O</div>
+            <div class="letters key content">P</div>
+            <div class="letters key content">Q</div>
+            <div class="letters key content">R</div>
+            <div class="letters key content">S</div>
+            <div class="letters key content">T</div>
+            <div class="letters key content">U</div>
+            <div class="letters key content">V</div>
+            <div class="letters key content">W</div>
+            <div class="letters key content">X</div>
+            <div class="letters key content">Y</div>
+            <div class="letters key content">Z</div>
+        </div>
+        <!--incorrect letters-->
+        <div class="incorrect-box">
+            <div class="incorrect-title"> incorrect letters: </div>
+            <div class="incorrect-letters"></div>
+        </div>
+        <!--chances container-->
+        <div class="chances-left">
+            <div class="chances-title"> Chances Left: </div>
+            <div class="hearts-chances">
+            </div>
+        </div>
+
+        <div class="clue-box">
+            <div class="clue-title"> Clue: </div>
+            <div class="clue"></div>
+        </div>
+
+        <!-----buttons----->
+        <div class="buttons">
+            <button id="hint-btn" class="btn"> Hint </button>
+            <button id="restart-btn" class="btn"> Restart Game </button>
+        </div>
+
+    </div>
+</body>
+
+</html>

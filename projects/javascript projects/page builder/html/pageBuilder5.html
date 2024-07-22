@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <textarea id="txt-area"></textarea>
+    <input type="color" id="txt-color">
+    <input type="number" id="txt-size" placeholder="text size">
+    <!--------------------------------->
+    <input type="number" id="w-size" placeholder="width">
+    <input type="number" id="h-size" placeholder="height">
+    <input type="color" id="u-color">
+    <button id="btn">Add</button>
+    <div class="container"></div>
+
+    <script>
+
+        const addButton = document.querySelector('#btn');
+        const textBox = document.getElementById('txt-area');
+        const textColor = document.getElementById('txt-color');
+        const textSize = document.querySelector('#txt-size');
+        const boxWidth = document.querySelector('#w-size');
+        const boxHeight = document.querySelector('#h-size');
+        const boxColor = document.getElementById('u-color');
+
+        const boxContainer = document.querySelector('.container');
+
+        addButton.addEventListener('click', () => {
+            const box = document.createElement('div');
+            box.innerHTML = textBox.value;
+            box.style.color = textColor.value;
+            box.style.fontSize = textSize.value + 'px';
+            box.style.width = boxWidth.value + 'px';
+            box.style.Height = boxHeight.value + 'px';
+            box.style.border = '1px solid #000';
+            box.style.backgroundColor = boxColor.value;
+
+            boxContainer.appendChild(box);
+        });
+
+    </script>
+</body>
+
+</html>

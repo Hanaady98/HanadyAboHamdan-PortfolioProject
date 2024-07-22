@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <textarea id="txt-area"></textarea>
+    <input type="color" id="txt-color">
+    <input type="number" id="txt-size" placeholder="text size">
+    <!-- border style-->
+    <input type="number" id="border-size" placeholder="border size">
+    <select id="border-style">
+        <option value="dotted">dotted</option>
+        <option value="dashed">dashed</option>
+        <option value="solid">solid</option>
+        <option value="double">double</option>
+        <option value="groove">groove</option>
+        <option value="ridge">ridge</option>
+        <option value="inset">inset</option>
+        <option value="outset">outset</option>
+        <option value="none">none</option>
+        <option value="hidden">hidden</option>
+    </select>
+    <input type="color" id="border-color">
+    <!--------------------------------->
+    <input type="number" id="w-size" placeholder="width">
+    <input type="number" id="h-size" placeholder="height">
+    <input type="color" id="u-color">
+    <button id="btn">Add</button>
+    <div class="container"></div>
+
+    <script>
+
+        const addButton = document.querySelector('#btn');
+        const textBox = document.getElementById('txt-area');
+        const textColor = document.getElementById('txt-color');
+        const textSize = document.querySelector('#txt-size');
+        /*-------------------border variables-----------------*/
+        const boxBorderSize = document.getElementById('border-size');
+        const boxBorderStyle = document.getElementById('border-style');
+        const boxBorderColor = document.getElementById('border-color');
+
+
+        const boxWidth = document.querySelector('#w-size');
+        const boxHeight = document.querySelector('#h-size');
+        const boxColor = document.getElementById('u-color');
+
+        const boxContainer = document.querySelector('.container');
+
+        addButton.addEventListener('click', () => {
+            const box = document.createElement('div');
+            box.innerHTML = textBox.value;
+            box.style.color = textColor.value;
+            box.style.fontSize = textSize.value + 'px';
+            box.style.width = boxWidth.value + 'px';
+            box.style.height = boxHeight.value + 'px';
+            box.style.borderStyle = boxBorderStyle.value;
+            box.style.borderColor = boxBorderColor.value;
+            box.style.borderWidth = boxBorderSize.value + 'px';
+            // box.style.border = '1px solid #000';
+            box.style.backgroundColor = boxColor.value;
+
+            boxContainer.appendChild(box);
+        });
+
+    </script>
+</body>
+
+</html>

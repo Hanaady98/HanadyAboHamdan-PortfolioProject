@@ -1,0 +1,219 @@
+/*---------------fonts import-------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Acme&family=Bebas+Neue&family=Fjalla+One&family=Heebo:wght@100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kalam:wght@300;400;700&family=Marcellus&family=Rajdhani:wght@300;400;500;600;700&family=Teko:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Mukta+Mahee:wght@200;300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*---------------roots-------------------*/
+:root {
+    /*categories*/
+    --font-category: normal normal normal 2rem 'Bebas Neue';
+    /*keyboard*/
+    --font-keys: normal normal 600 1rem "Heebo";
+    /*titles*/
+    --font-titles: normal normal normal 1.2rem "Acme";
+    /*clue text*/
+    --font-text: normal normal normal 1rem "Mukta Mahee";
+    /* Incorrect Letters */
+    --font-incorrect: normal normal normal 2rem 'Teko';
+    /*input*/
+    --font-input: normal normal 600 2rem 'Heebo';
+}
+
+/* body structure */
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    background: url('../images/cartoon.jpeg') no-repeat;
+    background-size: 100% 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+/*------------game container--------------*/
+
+.game-container {
+    width: 800px;
+    max-width: 90%;
+    height: fit-content;
+    display: flex;
+    box-shadow: 0px 0px 10px 4px violet;
+    border-radius: 5px;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f0f0f0;
+}
+
+/*--------------categories------------*/
+
+.categories {
+    height: 40px;
+    margin-top: 1rem;
+    font: var(--font-category);
+    text-align: center;
+}
+
+/*--------------correct letters------------*/
+
+.correct-letters {
+    width: 500px;
+    max-width: 90%;
+    height: 50px;
+    display: flex;
+    margin: 0 auto;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+
+/*--------------.letter-box text------------*/
+.letter-box {
+    box-shadow: inset rgb(121, 121, 121) 0px 0px 10px -3px;
+    border-radius: 5px;
+    width: 100%;
+    font: var(--font-input);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*--------------alphabet------------*/
+
+.alphabet {
+    display: flex;
+    gap: 10px;
+    width: 80%;
+    font: var(--font-keys);
+    justify-content: center;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+/*-------------alphabet letters-------------*/
+
+.alphabet .letters {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #debbd0;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+
+.alphabet .letters:hover {
+    border: 1px solid #000;
+    box-shadow: 0px 0px 10px 1px rgb(231, 135, 231);
+    animation: anim-keys .3s forwards;
+}
+
+@keyframes anim-keys {
+    100% {
+        box-shadow: 0px 0px 10px 1px rgb(231, 135, 231);
+    }
+}
+
+/*-------------incorrect letters-------------*/
+
+.incorrect-box {
+    width: 70%;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    margin-top: 1rem;
+    gap: 0.5rem;
+}
+
+.incorrect-title {
+    color: crimson;
+    font: var(--font-titles);
+}
+
+.incorrect-letters {
+    font: var(--font-incorrect);
+}
+
+/*--------------chances------------*/
+.chances-left {
+    display: flex;
+    width: 70%;
+    justify-content: center;
+    align-items: baseline;
+    margin-top: 1rem;
+    gap: 0.5rem;
+}
+
+.chances-title {
+    font: var(--font-titles);
+}
+
+.hearts-chances {
+    font: var(--font-text);
+    color: crimson;
+    font-size: 1.3rem;
+}
+
+/*--------------clue------------*/
+.clue-box {
+    display: flex;
+    width: 70%;
+    justify-content: center;
+    align-items: baseline;
+    margin-top: 0.4rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.clue {
+    font: var(--font-text);
+}
+
+.clue-title {
+    font: var(--font-titles);
+}
+
+/*-------------buttons-------------*/
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 2rem;
+}
+
+.buttons .btn {
+    padding: 0.5rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: #ecebeb;
+}
+
+.reset-message {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/*----------------animation---------------*/
+
+.buttons .btn:focus,
+.buttons .btn:hover {
+    border: 1px solid #000;
+    box-shadow: 0px 0px 10px 1px violet;
+    animation: anim-shadow .3s forwards;
+}
+
+@keyframes anim-shadow {
+    100% {
+        box-shadow: 0px 0px 10px 1px violet;
+    }
+}
