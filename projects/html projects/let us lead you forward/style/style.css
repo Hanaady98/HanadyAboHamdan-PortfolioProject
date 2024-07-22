@@ -89,7 +89,7 @@ input[type="submit"] {
 
 @media screen and (max-width:920px) {
     .img {
-        background: url(../Images/small.png) no-repeat;
+        background: url(../images/small.png) no-repeat;
         background-size: 100%;
     }
 
