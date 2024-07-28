@@ -36,8 +36,8 @@ A project that allows users to search for countries using an external API. and l
 Contact
 If you have any questions, feedback, or suggestions, feel free to reach out to the project owner:
 
-Name: Hend Abo Hamdan
-Email: nanosh1d@hotmail.com
+Name: Hanady Abo Hamdan
+Email: hanadyz98@hotmail.com
 
 Inspiration
 This portfolio project was inspired by a passion for web development and a desire to showcase my skills and creativity.
